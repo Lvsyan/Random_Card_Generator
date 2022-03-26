@@ -1,3 +1,13 @@
+Como hice el ejercicio:
+
+- Primero diseñe la estructura de la carta mas el background
+- Después generé los botones para tenerlo todo bien montado
+- Entrando en Javascript, primero cree las contantes o variables para definir los datos
+- Después hice una función para recorrer las cartas, basicamente poder crearlas haciendolo random y ue no se repitan
+- Creé 2 funciones mas, 1 para que el array que resetee sea ese y no el inicial y luego borrar las cartas desde la posicion 0, alineandolo con las id de HTMl
+- Penultima cosa, cree una función poniendo las posiciones de las cartas juntandolos con las id
+- Por ultimo añadir los botones en window.onload poniendo los eventlistener para que se genere esa función
+
 # Hello World with Vanilla JS
 
 Start coding in 30 seconds by opening this template in gitpod:
