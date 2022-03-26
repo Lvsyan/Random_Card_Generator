@@ -8,16 +8,6 @@ body {
   border-radius: 30px;
 }
 
-♦,
-♥ {
-  color: red;
-}
-
-♠,
-♣ {
-  color: black;
-}
-
 button {
   margin-right: 6px;
 }
