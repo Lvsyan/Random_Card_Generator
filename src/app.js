@@ -1,25 +1,12 @@
 /* eslint-disable */
+import "@popperjs/core";
 import "bootstrap";
 import "./style.css";
 
-const mezcla = [];
-const position = 1;
-const suits = ["♦", "♥", "♠", "♣"];
-const cards = [
-  "A",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "J",
-  "Q",
-  "K"
-];
+let mezcla = [];
+let position = 1;
+let suits = ["♦", "♥", "♠", "♣"];
+let cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 for (let palos of cards) {
   for (let numeros of suits) {
@@ -28,22 +15,22 @@ for (let palos of cards) {
     mezcla.sort(() => Math.random() - 0.5);
   }
 }
+const deckCards = () => {
+  let distribuir = mezcla[position];
+  document.querySelector("#numero").innerHTML = distribuir[0];
+  document.querySelector("#topSuit").innerHTML = distribuir[1];
+  document.querySelector("#botSuit").innerHTML = distribuir[1];
 
-const decksCards = () => {
-  document.querySelector("#numero").innerHTML = mezcla[0];
-  document.querySelector("#topSuit").innerHTML = mezcla[1];
-  document.querySelector("#botSuit").innerHTML = mezcla[1];
+  position = position + 1;
+  if (position == mezcla.length - 1) {
+    document.querySelector("#numero").innerHTML = "X";
+    document.querySelector("#topSuit").innerHTML = "X";
+    document.querySelector("#botSuit").innerHTML = "X";
+    start.disabled = true;
+  }
 };
-
-start.addEventListener("click", decksCards);
-/* const cambios = () => {
-  let a = Math.floor(Math.random) * inicio();
-  console.log(a);
-};
-
-console.log(cambios());
 
 window.onload = function() {
   //write your code her
-  console.log("Hola");
-}; */
+  start.addEventListener("click", deckCards);
+};
