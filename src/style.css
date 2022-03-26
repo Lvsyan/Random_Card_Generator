@@ -1,1 +1,23 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #0e7e12;
+}
+
+.card {
+  border-radius: 30px;
+}
+
+♦,
+♥ {
+  color: red;
+}
+
+♠,
+♣ {
+  color: black;
+}
+
+button {
+  margin-right: 6px;
+}
